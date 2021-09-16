@@ -6,5 +6,8 @@ void main(List<String> arguments) {
     exit(1);
   }
   final inputFile = arguments.first;
-  print(inputFile);
+  final lines = File(inputFile).readAsLinesSync();
+  for (var line in lines) {
+    print(line);
+  }
 }
